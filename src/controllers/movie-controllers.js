@@ -1,11 +1,13 @@
+import {movie-services} from "../../components/services/movie-services" ;
+
 // contains controller functions for movies CRUD
 export function getTopRatedMovies(req, res) {
   //validation
-  return movieService.getTopRatedMovies();
+  res.json (movie-services.getTopRatedMovies());
 }
 
 export function getStreamingMovies(req, res) {
-  return movieService.getStreamingMovies();
+  res.json( movie-services.getStreamingMovies());
 }
 
 export function getMoviesForRent(req, res) {

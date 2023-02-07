@@ -23,9 +23,11 @@ app.get("/tv/top_rated?", (req, res) => {
   getTopRatedMovies(req, res);
 });
 
+export function Routes(app) {
 app.get("/movie/now_playing?", (req, res) => {
   getStreamingMovies(req, res);
 });
+}
 
 app.get("movie/popular?", (req, res) => {
   getMoviesForRent(req, res);
