@@ -1,36 +1,35 @@
-import {movie-services} from "../../components/services/movie-services" ;
+import { movieService } from "../../components/services/movie-services";
 
 // contains controller functions for movies CRUD
 export function getTopRatedMovies(req, res) {
   //validation
-  res.json (movie-services.getTopRatedMovies());
+  res.json(movieService.getTopRatedMovies());
 }
 
 export function getStreamingMovies(req, res) {
-  res.json( movie-services.getStreamingMovies());
+  res.json(movieService.getStreamingMovies());
 }
 
 export function getMoviesForRent(req, res) {
-  return movieService.getMoviesForRent();
+  res.json(movieService.getMoviesForRent());
 }
 
 export function getInTheatres(req, res) {
-  
-  return movieService.getInTheatres();
+  res.json(movieService.getInTheatres());
 }
 
 export function getMovies(req, res) {
-  return movieService.getMovies();
+  res.json (movieService.getMovies());
 }
 
 export function getTV(req, res) {
-  return movieService.getTV();
+  res.json (movieService.getTV());
 }
 
 export function getTrendingMovies(req, res) {
-  return movieService.getTrendingMovies();
+  res.json (movieService.getTrendingMovies());
 }
 
 export function getTrendingToday(req, res) {
-  return movieService.getTrendingToday();
+  res.json (movieService.getTrendingToday());
 }

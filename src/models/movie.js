@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // will contain the DB entity for a movie
-const { Sequelize, DataTypes } = require("sequelize");
+const { Sequelize, DataTypes } = require("sequelize")
 const sequelize = new Sequelize("sqlite:memory");
 
 const Movie = sequelize.define("Movie", {
