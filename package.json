@@ -2,8 +2,8 @@
   "name": "backend-md",
   "version": "0.1.0",
   "private": true,
- 
-  "scripts": {
+  "type": "module",
+    "scripts": {
     "start": "node index",
     "dev": "nodemon index",
     "build": "react-scripts build",

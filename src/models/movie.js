@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // will contain the DB entity for a movie
 const { Sequelize, DataTypes } = require("sequelize")
-const sequelize = new Sequelize("sqlite:memory");
+
+const sequelize = new Sequelize('backend-md', 'root', 'movieDB', {
+  dialect: 'mysql'
+})
 
 const Movie = sequelize.define("Movie", {
   id: {
@@ -21,3 +24,10 @@ const Movie = sequelize.define("Movie", {
     allowNull:false
   }
 });
+
+try {
+  await sequelize.authenticate();
+  console.log('Connection has been established successfully.');
+} catch (error) {
+  console.error('Unable to connect to the database:', error);
+}
