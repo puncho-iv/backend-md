@@ -26,15 +26,15 @@ export function setupRoutes(app) {
     getStreamingMovies(req, res);
   });
 
-  app.get("movie/popular?", (req, res) => {
+  app.get("/movie/popular?", (req, res) => {
     getMoviesForRent(req, res);
   });
 
-  app.get("movie/upcoming?", (req, res) => {
+  app.get("/movie/upcoming?", (req, res) => {
     getInTheatres(req, res);     
   });
 
-  app.get("movie/top_rated?", (req, res) => {
+  app.get("/movie/top_rated?", (req, res) => {
     getMovies(req, res);
   });
 
@@ -46,7 +46,7 @@ export function setupRoutes(app) {
     getTrendingMovies(req, res);
   });
 
-  app.get("trending/all/day?", (req, res) => {
+  app.get("/trending/all/day?", (req, res) => {
     getTrendingToday(req, res);
   });
 }
