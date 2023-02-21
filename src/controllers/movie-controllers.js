@@ -1,4 +1,4 @@
-import { movieService } from "../../components/services/movie-services";
+import { movieService } from "../services/movie-services.js";
 
 // contains controller functions for movies CRUD
 export function getTopRatedMovies(req, res) {

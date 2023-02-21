@@ -1,12 +1,5 @@
 // will code to register/glue routes to controller functions
-import { getTopRatedMovies } from "./controllers/movie-controllers.js";
-import { getStreamingMovies } from "./controllers/movie-controllers.js";
-import { getInTheatres } from "./controllers/movie-controllers.js";
-import { getMovies } from "./controllers/movie-controllers.js";
-import { getMoviesForRent } from "./controllers/movie-controllers.js";
-import { getTV } from "./controllers/movie-controllers.js";
-import { getTrendingMovies } from "./controllers/movie-controllers.js";
-import { getTrendingToday } from "./controllers/movie-controllers.js";
+import { getTopRatedMovies, getStreamingMovies, getInTheatres, getMovies, getMoviesForRent, getTV, getTrendingMovies, getTrendingToday } from "./controllers/movie-controllers.js";
 
 /**
  * This function binds routes to controller functions.
