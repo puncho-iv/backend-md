@@ -1,5 +1,5 @@
 // will code to register/glue routes to controller functions
-import { getTopRatedMovies, getStreamingMovies, getInTheatres, getMovies, getMoviesForRent, getTV, getTrendingMovies, getTrendingToday } from "./controllers/movie-controllers.js";
+import { getTopRatedMovies, getStreamingMovies, getInTheatres, getMovies, getMoviesForRent, getTV, getTrendingMovies, getTrendingToday, createMovie } from "./controllers/movie-controllers.js";
 
 /**
  * This function binds routes to controller functions.
@@ -42,4 +42,6 @@ export function setupRoutes(app) {
   app.get("/trending/all/day?", (req, res) => {
     getTrendingToday(req, res);
   });
+
+  app.post("/movies", createMovie)
 }
