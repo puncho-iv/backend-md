@@ -1,4 +1,5 @@
-import { movieService } from "../../components/services/movie-services";
+import { movieService } from "../services/movie-services-net.js";
+import { movieServiceDb } from "../services/movie-services-db.js";
 
 // contains controller functions for movies CRUD
 export function getTopRatedMovies(req, res) {
@@ -32,4 +33,8 @@ export function getTrendingMovies(req, res) {
 
 export function getTrendingToday(req, res) {
   res.json (movieService.getTrendingToday());
+}
+
+export async function createMovie(req, res){
+  res.json((await movieServiceDb.createMovie(req.body)).toJSON());
 }

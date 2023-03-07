@@ -5,10 +5,7 @@
   "type": "module",
     "scripts": {
     "start": "node index",
-    "dev": "nodemon index",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "nodemon index"
   },
   "dependencies": {
     "dot": "^1.1.3",

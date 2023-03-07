@@ -1,23 +1,39 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // will contain the DB entity for a movie
-const { Sequelize, DataTypes } = require("sequelize")
+import { DataTypes } from "sequelize";
+import {sequelize } from "../repositories/postgres.js"
 
-const sequelize = new Sequelize('backend-md', 'root', 'movieDB', {
-  dialect: 'mysql'
-})
+
+// const { Sequelize, DataTypes } = require("sequelize")
+
+// const sequelize = new Sequelize('backend-md', 'root', 'movieDB', {
+//   dialect: 'mysql'
+// })
 
 const Movie = sequelize.define("Movie", {
+  adult: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+  },
+
+
+
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
+
   },
 
-  name: {
+  original_language: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  origin_country:{
+
+  origin_title:{
     type: DataTypes.STRING,
+    allowNull:false,
   },
   first_air_date: {
     type: DataTypes.DATE,
@@ -25,9 +41,6 @@ const Movie = sequelize.define("Movie", {
   }
 });
 
-try {
-  await sequelize.authenticate();
-  console.log('Connection has been established successfully.');
-} catch (error) {
-  console.error('Unable to connect to the database:', error);
+export {
+  Movie
 }
