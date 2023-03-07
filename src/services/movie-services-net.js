@@ -1,9 +1,10 @@
 // will contains service functions for movies
 import axios from "axios";
+import { createMovie } from "../repositories/movie-repository.js";
 
 const API_URL = "https://api.themoviedb.org/3";
 
-class MovieService {
+class MovieServiceNet {
   async getTopRatedMovies() {
     const response = await axios.get(`${API_URL}/tv/top_rated?`);
     return response.data;
@@ -45,4 +46,4 @@ class MovieService {
   }
 }
 
-export const movieService = new MovieService();
+export const movieService = new MovieServiceNet();
