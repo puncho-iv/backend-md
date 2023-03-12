@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+<<<<<<< HEAD
+    "scripts": {
+    "start": "node index",
+=======
   "scripts": {
     "start": "nodemon index",
+>>>>>>> 67fc83729c62b983c7a2d1f9dfd21a66e8d4fc5b
     "dev": "nodemon index"
   },
   "dependencies": {
