@@ -3,20 +3,11 @@
 import { DataTypes } from "sequelize";
 import {sequelize } from "../repositories/postgres.js"
 
-
-// const { Sequelize, DataTypes } = require("sequelize")
-
-// const sequelize = new Sequelize('backend-md', 'root', 'movieDB', {
-//   dialect: 'mysql'
-// })
-
 const Movie = sequelize.define("Movie", {
   adult: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
   },
-
-
 
   id: {
     type: DataTypes.INTEGER,

@@ -1,6 +1,6 @@
 // will contains service functions for movies
 import axios from "axios";
-import { createMovie } from "../repositories/movie-repository";
+import { createMovie } from "../repositories/movie-repository.js";
 
 const API_URL = "https://api.themoviedb.org/3";
 
